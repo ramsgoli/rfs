@@ -1,0 +1,51 @@
+services:
+  master:
+    build:
+      context: ./go
+      args:
+        - APP=master
+    ports:
+      - 8000:8000
+    networks:
+      main_network:
+        ipv4_address: 10.0.0.255
+  worker1:
+    build:
+      context: ./go
+      args:
+        - APP=agent
+    environment:
+      - SERVER_HOSTNAME=10.0.0.255
+      - SERVER_HTTP_PORT=8080
+      - ID=12345
+      - IP_ADDRESS=10.0.0.2
+      - DATA_DIR=/data
+    depends_on:
+      - master
+    networks:
+      main_network:
+        ipv4_address: 10.0.0.2
+
+  worker2:
+    build:
+      context: ./go
+      args:
+        - APP=agent
+    environment:
+      - SERVER_HOSTNAME=10.0.0.255
+      - SERVER_HTTP_PORT=8080
+      - ID=22345
+      - IP_ADDRESS=10.0.0.3
+      - DATA_DIR=/data
+    depends_on:
+      - master
+    networks:
+      main_network:
+        ipv4_address: 10.0.0.3
+
+networks:
+  main_network:
+    ipam:
+      driver: default
+      config:
+        - subnet: "10.0.0.0/16"
