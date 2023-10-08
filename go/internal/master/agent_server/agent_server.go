@@ -6,7 +6,7 @@ import (
 	"sync"
 
 	"github.com/gin-gonic/gin"
-	agentmanagerservice "github.com/ramsgoli/go_sockets/internal/master/agent_manager_service"
+	agentmanagerservice "github.com/ramsgoli/rfs/internal/master/agent_manager_service"
 )
 
 type agentServer struct {

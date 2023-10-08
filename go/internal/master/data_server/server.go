@@ -7,8 +7,8 @@ import (
 	"net"
 	"sync"
 
-	agentmanagerservice "github.com/ramsgoli/go_sockets/internal/master/agent_manager_service"
-	chunkmanagerservice "github.com/ramsgoli/go_sockets/internal/master/chunk_manager_service"
+	agentmanagerservice "github.com/ramsgoli/rfs/internal/master/agent_manager_service"
+	chunkmanagerservice "github.com/ramsgoli/rfs/internal/master/chunk_manager_service"
 )
 
 const HAPPY_RESPONSE = 0x1

@@ -1,4 +1,4 @@
-module github.com/ramsgoli/go_sockets
+module github.com/ramsgoli/rfs
 
 go 1.20
 

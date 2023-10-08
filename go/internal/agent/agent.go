@@ -4,8 +4,8 @@ import (
 	"context"
 	"log"
 
-	dataserver "github.com/ramsgoli/go_sockets/internal/agent/data_server"
-	masterservice "github.com/ramsgoli/go_sockets/internal/agent/master_service"
+	dataserver "github.com/ramsgoli/rfs/internal/agent/data_server"
+	masterservice "github.com/ramsgoli/rfs/internal/agent/master_service"
 )
 
 type agent struct {

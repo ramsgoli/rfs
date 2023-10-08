@@ -9,11 +9,11 @@ import (
 	"sync"
 	"syscall"
 
-	"github.com/ramsgoli/go_sockets/internal/master"
-	agentmanagerservice "github.com/ramsgoli/go_sockets/internal/master/agent_manager_service"
-	agentserver "github.com/ramsgoli/go_sockets/internal/master/agent_server"
-	chunkmanagerservice "github.com/ramsgoli/go_sockets/internal/master/chunk_manager_service"
-	dataserver "github.com/ramsgoli/go_sockets/internal/master/data_server"
+	"github.com/ramsgoli/rfs/internal/master"
+	agentmanagerservice "github.com/ramsgoli/rfs/internal/master/agent_manager_service"
+	agentserver "github.com/ramsgoli/rfs/internal/master/agent_server"
+	chunkmanagerservice "github.com/ramsgoli/rfs/internal/master/chunk_manager_service"
+	dataserver "github.com/ramsgoli/rfs/internal/master/data_server"
 )
 
 const DataServerPort = 8000

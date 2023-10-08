@@ -3,9 +3,9 @@ package master
 import (
 	"log"
 
-	agentmanagerservice "github.com/ramsgoli/go_sockets/internal/master/agent_manager_service"
-	agentserver "github.com/ramsgoli/go_sockets/internal/master/agent_server"
-	dataserver "github.com/ramsgoli/go_sockets/internal/master/data_server"
+	agentmanagerservice "github.com/ramsgoli/rfs/internal/master/agent_manager_service"
+	agentserver "github.com/ramsgoli/rfs/internal/master/agent_server"
+	dataserver "github.com/ramsgoli/rfs/internal/master/data_server"
 )
 
 type master struct {

@@ -1,5 +1,5 @@
 {
-  "name": "go_sockets",
+  "name": "rfs",
   "version": "1.0.0",
   "description": "",
   "main": "socket.js",

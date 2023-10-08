@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"math"
 
-	agentmanagerservice "github.com/ramsgoli/go_sockets/internal/master/agent_manager_service"
+	agentmanagerservice "github.com/ramsgoli/rfs/internal/master/agent_manager_service"
 )
 
 type ChunkManagerService interface {
