@@ -9,7 +9,6 @@ import (
 )
 
 type agent struct {
-	id                    int64
 	masterServiceHostname string
 	masterServicePort     int64
 	masterService         masterservice.MasterService
@@ -19,7 +18,6 @@ type agent struct {
 }
 
 type AgentOpts struct {
-	Id                   int64
 	MasterServerHostname string
 	MasterServerPort     int64
 	MasterService        masterservice.MasterService
@@ -34,7 +32,6 @@ type Agent interface {
 
 func NewAgent(opts *AgentOpts) Agent {
 	return &agent{
-		id:                    opts.Id,
 		masterServiceHostname: opts.MasterServerHostname,
 		masterServicePort:     opts.MasterServerPort,
 		masterService:         opts.MasterService,

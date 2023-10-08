@@ -5,7 +5,6 @@ import (
 )
 
 type Config struct {
-	ID             int    `env:"ID"`
 	ServerHostname string `env:"SERVER_HOSTNAME" envDefault:"localhost"`
 	ServerHttpPort int    `env:"SERVER_HTTP_PORT" envDefault:"8080"`
 	ServerDataPort int    `env:"SERVER_DATA_PORT" envDefault:"8000"`

@@ -2,7 +2,6 @@ package main
 
 import (
 	"log"
-	"net"
 	"os"
 	"os/signal"
 	"syscall"
@@ -26,19 +25,6 @@ func main() {
 		}
 	}
 
-	// get hostname
-	hostname, err := os.Hostname()
-	if err != nil {
-		log.Panicf("error getting hostname: %v", err)
-	}
-	addrs, err := net.LookupIP(hostname)
-	if err != nil {
-		log.Panicf("error looking up IP: %v", err)
-	}
-	for _, addr := range addrs {
-		log.Printf("got addr: %s\n", addr.String())
-	}
-
 	httpClient := masterservice.NewHttpClient()
 	masterService := masterservice.NewMasterService(httpClient)
 	dataserver, err := dataserver.NewDataServer(&dataserver.DataServerOpts{
@@ -50,7 +36,6 @@ func main() {
 	}
 
 	agent := agent.NewAgent(&agent.AgentOpts{
-		Id:                   int64(cfg.ID),
 		MasterServerHostname: cfg.ServerHostname,
 		MasterServerPort:     int64(cfg.ServerHttpPort),
 		MasterService:        masterService,
